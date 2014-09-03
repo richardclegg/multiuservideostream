@@ -1,0 +1,42 @@
+{
+	"demand_model": {
+        "type": "demandmodel.poisLogDemand.poisLogDemand",
+        "locations": "src/loc_file.csv",
+        "time_demand": "src/time_file.csv",
+        "mean_daily_arrivals": 100000,
+        "session_mean": 1000.0,
+        "session_sigma": 1.24
+    },
+    "stream_model": {
+        "type": "sessionmodel.pokerModel.pokerModel",
+        "max_room": 12,
+        "min_room": 6
+    },
+    "network_model": {
+        "type": "networkmodel.simpleNetwork.simpleNetwork",
+        "file": "src/simpleNetwork.csv",
+        "between_cost_dollar_GB": 1.0,
+        "full_stream_MBs": 1.0,
+        "compressed_stream_MBs": 0.1
+    },
+    "route_model": {
+        "type": "routemodel.hotPotatoRoute.hotPotatoRoute"
+    },
+    "qoe_model": {
+        "type": "qoemodel.haversine.haversine"
+    },
+    "server_model": {
+        "type": "servermodel.nRandom.nRandom",
+        "number": 2
+    },
+    "output_models": [
+        {
+            "type": "outputmodel.basicDaily.basicDaily",
+            "file": "daysummary.txt"
+        },
+        {
+            "type": "outputmodel.basicDaily.basicDaily"
+        }
+    ],
+    "simulation_days": 100
+}

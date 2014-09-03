@@ -1,0 +1,201 @@
+src contains the source code files for the python
+
+src/streamsim.py is the main entry point and is the most used part
+
+Some other special purpose code exists
+
+src/createNStatic.py  is used to create a data file of the best choice
+servers for the N static policy
+src/plotClusters.py is used to create a data file of clustered nodes
+
+scripts contains config files and scripts to run them.
+
+scripts/plot_clusters.R creates graphs/cluster_plot.pdf 
+
+
+Getting results
+---------------
+
+Unless otherwise noted run all from streamsim directory
+
+Do clustering:
+src/plotClusters.py scripts/poker_dynamic.json > data/clusters.out 
+Make plots
+Rscript scripts/plot_clusters.R
+Rscript scripts/plot_demand.R
+
+
+#  This is a fit for the poker demand from R
+sd=0.60; mean=2.0; mu=log(mean)-sd*sd/2.0; qlnorm(c(0.1,0.98),mean=mu,sdlog=sd)
+[1] 0.7743094 5.7281724
+
+Create clusters for nStatic:
+src/createNStatic.py scripts/poker_base.json 6 1000 > scripts/poker_static.out 
+Order:
+1) Ashburn (US east)
+2) Dublin
+3) Palo Alto (US west)
+4) Tokyo
+5) Singapore
+6) Sao Paolo, Brazil
+
+src/createNStatic.py scripts/mooc_base.json 6 1000 > scripts/mooc_static.out 
+1) Ashburn (US east)
+2) Dublin
+3) Tokyo
+4) Palo Alto (US west)
+5) Singapore
+6) Sao Paolo, Brazil
+
+src/createNStatic.py scripts/poker_largedc_base.json 6 1000 > scripts/poker_largedc_static.out
+
+
+src/timeOrderCreateNStatic.py scripts/poker_base.json 6 1000 > scripts/poker_static_time.out
+src/timeOrderCreateNStatic.py scripts/mooc_base.json 6 1000 > scripts/mooc_static_time.out
+
+
+#Get data to plot some route data
+src/plotRoutes.py scripts/poker_dynamic_base.json > data/poker_routes.out
+
+Rscript scripts/plot_routes.R data/poker_routes.out graphs/poker_routes.pdf
+
+
+MAIN RESULTS
+#Basics for mooc and poker var servers
+nohup scripts/mooc_var_ndynamic.sh > mooc_var_ndynamic.nohup &
+nohup scripts/mooc_var_nrandom.sh  > mooc_var_nrandom.nohup &
+nohup scripts/mooc_var_nstatic.sh > mooc_var_nstatic.nohup &
+nohup scripts/poker_var_ndynamic.sh > poker_var_ndynamic.nohup &
+nohup scripts/poker_var_nrandom.sh > poker_var_nrandom.nohup &
+nohup scripts/poker_var_nstatic.sh > poker_var_nstatic.nohup & 
+#vary number of users
+nohup scripts/poker_var_user_ndynamic.sh > poker_var_user_ndynamic.nohup &
+nohup scripts/poker_var_user_nstatic.sh > poker_var_user_nstatic.nohup &
+nohup scripts/poker_var_user_nrandom.sh > poker_var_user_nrandom.nohup &
+nohup scripts/mooc_var_user_ndynamic.sh > mooc_var_user_ndynamic.nohup &
+nohup scripts/mooc_var_user_nstatic.sh > mooc_var_user_nstatic.nohup &
+nohup scripts/mooc_var_user_nrandom.sh > mooc_var_user_nrandom.nohup &
+#large data centre results
+nohup scripts/poker_var_largedc_dynamic.sh > poker_var_largedc_dynamic.nohup &
+nohup scripts/poker_var_largedc_static.sh > poker_var_largedc_static.nohup &
+nohup scripts/poker_var_largedc_random.sh > poker_var_largedc_random.nohup &
+
+#results with "flat earth" model
+nohup scripts/mooc_var_ndynamic_equaldist.sh > mooc_var_ndynamic_equaldist.nohup &
+nohup scripts/poker_var_ndynamic_equaldist.sh > poker_var_ndynamic_equaldist.nohup &
+nohup scripts/mooc_var_nrandom_equaldist.sh > mooc_var_nrandom_equaldist.nohup &
+nohup scripts/poker_var_nrandom_equaldist.sh > poker_var_nrandom_equaldist.nohup &
+nohup scripts/mooc_var_nstatic_equaldist.sh > mooc_var_nstatic_equaldist.nohup &
+nohup scripts/poker_var_nstatic_equaldist.sh > poker_var_nstatic_equaldist.nohup &
+
+#vary demand
+nohup scripts/poker_var_demand_ndynamic.sh > poker_var_demand_ndynamic.nohup &
+nohup scripts/poker_var_demand_nstatic.sh > poker_var_demand_nstatic.nohup &
+nohup scripts/poker_var_demand_nrandom.sh > poker_var_demand_nrandom.nohup &
+nohup scripts/mooc_var_demand_ndynamic.sh > mooc_var_demand_ndynamic.nohup &
+nohup scripts/mooc_var_demand_nstatic.sh > mooc_var_demand_nstatic.nohup &
+nohup scripts/mooc_var_demand_nrandom.sh > mooc_var_demand_nrandom.nohup &
+
+#Stay on route routing strategy
+nohup scripts/poker_var_stay_ndynamic.sh > poker_var_stay_ndynamic.nohup &
+nohup scripts/poker_var_stay_nstatic.sh > poker_var_stay_nstatic.nohup &
+nohup scripts/poker_var_stay_nrandom.sh > poker_var_stay_nrandom.nohup &
+#Potato routing strategy
+nohup scripts/poker_var_potato_ndynamic.sh > poker_var_potato_ndynamic.nohup &
+nohup scripts/poker_var_potato_nstatic.sh > poker_var_potato_nstatic.nohup &
+nohup scripts/poker_var_potato_nrandom.sh > poker_var_potato_nrandom.nohup &
+
+#local hack 
+export PATH=/home/rclegg/bin:$PATH; cd ~/code/btvideostream/streamsim
+#That line is needed to set for using python2.6 and move to path in my 
+#local environment -- don't need it elswhere
+
+GET GRAPHS
+
+
+
+#Plot costs and qoe with various servers for poker
+Rscript scripts/plot_cost_servers.R data/poker_var_nrandom.out data/poker_var_nstatic.out data/poker_var_ndynamic.out 10000 0.84 graphs/poker_var_servers_cost.pdf
+Rscript scripts/plot_qoe_servers.R data/poker_var_nrandom.out data/poker_var_nstatic.out data/poker_var_ndynamic.out 10000 graphs/poker_var_servers_qoe.pdf
+#Plot costs and qoe with various servers for MOOC
+Rscript scripts/plot_cost_servers.R data/mooc_var_nrandom.out data/mooc_var_nstatic.out data/mooc_var_ndynamic.out 1000 0.45 graphs/mooc_var_servers_cost.pdf
+Rscript scripts/plot_qoe_servers.R data/mooc_var_nrandom.out data/mooc_var_nstatic.out data/mooc_var_ndynamic.out 1000 graphs/mooc_var_servers_qoe.pdf
+
+
+# Plots for variable users
+Rscript scripts/plot_qoe_var_users.R data/poker_var_user_nrandom.out data/poker_var_user_nstatic.out data/poker_var_user_ndynamic.out graphs/poker_var_users_qoe.pdf
+Rscript scripts/plot_cost_var_users.R data/poker_var_user_nrandom.out data/poker_var_user_nstatic.out data/poker_var_user_ndynamic.out 0.84 graphs/poker_var_users_cost.pdf
+
+Rscript scripts/plot_qoe_var_users.R data/mooc_var_user_nrandom.out data/mooc_var_user_nstatic.out data/mooc_var_user_ndynamic.out graphs/mooc_var_users_qoe.pdf
+Rscript scripts/plot_cost_var_users.R data/mooc_var_user_nrandom.out data/mooc_var_user_nstatic.out data/mooc_var_user_ndynamic.out 0.45 graphs/mooc_var_users_cost.pdf
+
+#Plots for different routing policy
+
+Rscript scripts/plot_qoe_servers_routes.R data/poker_var_ndynamic.out data/poker_var_stay_ndynamic.out data/poker_var_potato_ndynamic.out 10000 graphs/poker_qoe_servers_routes.pdf
+Rscript scripts/plot_cost_servers_routes.R data/poker_var_ndynamic.out data/poker_var_stay_ndynamic.out data/poker_var_potato_ndynamic.out 10000 0.84 graphs/poker_cost_servers_routes.pdf
+
+#Plots for equal distribution
+
+Rscript scripts/plot_cost_servers.R data/poker_var_nrandom_equaldist.out data/poker_var_nstatic_equaldist.out data/poker_var_ndynamic_equaldist.out 10000 0.84  graphs/poker_equaldist_cost.pdf
+Rscript scripts/plot_qoe_servers.R data/poker_var_nrandom_equaldist.out data/poker_var_nstatic_equaldist.out data/poker_var_ndynamic_equaldist.out 10000 graphs/poker_equaldist_qoe.pdf
+Rscript scripts/plot_cost_servers.R data/mooc_var_nrandom_equaldist.out data/mooc_var_nstatic_equaldist.out data/mooc_var_ndynamic_equaldist.out 1000 0.45  graphs/mooc_equaldist_cost.pdf
+Rscript scripts/plot_qoe_servers.R data/mooc_var_nrandom_equaldist.out data/mooc_var_nstatic_equaldist.out data/mooc_var_ndynamic_equaldist.out 1000 graphs/mooc_equaldist_qoe.pdf
+
+#Plots for large data centres
+Rscript scripts/plot_cost_servers.R data/poker_var_largedc_random.out data/poker_var_largedc_static.out data/poker_var_largedc_dynamic.out 10000 0.84  graphs/poker_var_largedc_servers_cost.pdf
+Rscript scripts/plot_qoe_servers.R data/poker_var_largedc_random.out data/poker_var_largedc_static.out data/poker_var_largedc_dynamic.out 10000 graphs/poker_var_largedc_servers_qoe.pdf
+
+# Different routing strategies
+
+Rscript scripts/plot_cost_servers.R data/poker_var_stay_nrandom.out data/poker_var_stay_nstatic.out data/poker_var_stay_ndynamic.out 10000 0.84  graphs/poker_var_stay_servers_cost.pdf
+Rscript scripts/plot_qoe_servers.R data/poker_var_stay_nrandom.out data/poker_var_stay_nstatic.out data/poker_var_stay_ndynamic.out 10000 graphs/poker_var_stay_servers_qoe.pdf
+
+# Different user stay durations
+
+Rscript scripts/plot_cost_demand.R data/mooc_var_demand_nrandom.out data/mooc_var_demand_nstatic.out data/mooc_var_demand_ndynamic.out 1000  graphs/mooc_var_demand_cost.pdf
+
+
+Rscript scripts/plot_qoe_demand.R data/mooc_var_demand_nrandom.out data/mooc_var_demand_nstatic.out data/mooc_var_demand_ndynamic.out 1000 graphs/mooc_var_demand_qoe.pdf
+
+Rscript scripts/plot_cost_demand.R data/poker_var_demand_nrandom.out data/poker_var_demand_nstatic.out data/poker_var_demand_ndynamic.out 10000 0.84  graphs/poker_var_demand_cost.pdf
+
+
+Rscript scripts/plot_qoe_demand.R data/poker_var_demand_nrandom.out data/poker_var_demand_nstatic.out data/poker_var_demand_ndynamic.out 10000 graphs/poker_var_demand_qoe.pdf
+
+
+#var servers static with time of day.
+
+Rscript scripts/plot_qoe_nstatic.R data/poker_var_nstatic.out data/poker_var_nstatic_time.out 10000 graphs/poker_var_servers_nstatic_qoe.pdf
+
+# alternative error bars
+
+Rscript scripts/plot_qoe_alt_errors.R data/poker_var_nrandom.out data/poker_var_nstatic.out data/poker_var_ndynamic.out 10000 graphs/poker_qoe_alt_errors.pdf
+
+# proportion managed delay
+
+Rscript scripts/plot_proportion_servers.R data/poker_var_nrandom.out data/poker_var_nstatic.out data/poker_var_ndynamic.out graphs/poker_proportion_servers.pdf
+Rscript scripts/plot_proportion_servers.R data/mooc_var_nrandom.out data/mooc_var_nstatic.out data/mooc_var_ndynamic.out graphs/mooc_proportion_servers.pdf
+
+#big data
+
+Rscript scripts/plot_qoe_1file_servers.R data/poker_var_largedc_dynamic.out 10000 graphs/poker_largedc_dynamic_qoe.pdf
+Rscript scripts/plot_cost_1file_servers.R data/poker_var_largedc_dynamic.out 0.45 10000 graphs/poker_largedc_dynamic_cost.pdf
+Rscript scripts/plot_qoe_1file_servers.R data/poker_var_largedc_static.out 10000 graphs/poker_largedc_static_qoe.pdf
+Rscript scripts/plot_cost_1file_servers.R data/poker_var_largedc_static.out 0.84  10000 graphs/poker_largedc_static_cost.pdf
+
+#Do equal dist stuff
+
+Rscript scripts/plot_qoe_1file_servers.R data/mooc_var_ndynamic_equaldist.out 1000 graphs/mooc_var_ndynamic_equaldist_qoe.pdf
+Rscript scripts/plot_cost_1file_servers.R data/mooc_var_ndynamic_equaldist.out 1000 0.45  graphs/mooc_var_ndynamic_equaldist.pdf
+Rscript scripts/plot_qoe_1file_servers.R data/poker_var_ndynamic_equaldist.out 1000 graphs/poker_var_ndynamic_equaldist_qoe.pdf
+Rscript scripts/plot_cost_1file_servers.R data/poker_var_ndynamic_equaldist.out 0.84 1000 graphs/poker_var_ndynamic_equaldist.pdf
+
+
+
+#Make png from pdf for inclusion in word docs:
+for a in graphs/*.pdf; do png=graphs/`basename $a .pdf`.png; convert -density 200x200 -resize 100% $a $png ; done
+
+#convert any of them from pdf to png
+
+scripts/conv_pdf.sh graphs/graph.pdf 
+#outputs graph/graph.png

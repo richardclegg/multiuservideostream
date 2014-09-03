@@ -1,0 +1,62 @@
+{
+	"demand_model": {
+        "type": "demandmodel.poisLogDemand.poisLogDemand",
+        "locations": "../geo/VideoDistributionModel/out/poker.out",
+        "time_demand": "../geo/VideoDistributionModel/out/poker_time.out",
+        "mean_daily_arrivals": 10000,
+        "session_mean": 3015.0,
+        "session_sigma": 0.66886
+    },
+    "session_model": {
+        "type": "sessionmodel.pokerModel.pokerModel",
+        "max_room": 10,
+        "min_room": 4
+    },
+    "network_model": {
+        "type": "networkmodel.simpleNetwork.simpleNetwork",
+        "file": "../geo/VideoDistributionModel/out/manydc.out",
+        "between_cost_dollar_GB": 0.01,
+        "full_stream_MBs": 0.25,
+        "compressed_stream_MBs": 0.0156
+    },
+    "route_model": {
+        "type": "routemodel.stayOnRoute.stayOnRoute"
+    },
+    "qoe_model": {
+        "type": "qoemodel.haversine.haversine"
+    },
+    "server_model": {
+        "type": "servermodel.nDynamic.nDynamic",
+        "number": 3
+    },
+    "output_models": [
+        {
+            "type": "outputmodel.basicDaily.basicDaily",
+            "file": "pokerdaysummary.txt"
+        },
+        {
+            "type": "outputmodel.basicDaily.basicDaily"
+        },
+        {
+            "type": "outputmodel.outputCost.outputCost",
+            "file": "pokercostsummary.txt"
+        },
+        {
+            "type": "outputmodel.sessionStats.sessionStats",
+            "file": "sessionsummary.txt",
+            "time": "daily"
+        },
+        {
+            "type": "outputmodel.qosPdf.qosPdf",
+            "file": "pokerqoesummary.txt",
+            "style": "quintile",
+            "time": "daily"
+        },
+        {
+            "type": "outputmodel.sessionStats.sessionStats",
+            "file": "sessiondaysummary.txt",
+            "time": "daily"
+        }
+    ],
+    "simulation_days": 100
+}

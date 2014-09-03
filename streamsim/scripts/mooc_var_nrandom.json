@@ -1,0 +1,53 @@
+{
+	"demand_model": {
+        "type": "demandmodel.poisLogDemand.poisLogDemand",
+        "locations": "../geo/VideoDistributionModel/out/mooc.out",
+        "time_demand": "../geo/VideoDistributionModel/out/mooc_time.out",
+        "mean_daily_arrivals": 1000,
+        "session_mean": 1620.0,
+        "session_sigma": 0.8
+    },
+    "session_model": {
+        "type": "sessionmodel.moocModel.moocModel"
+    },
+    "network_model": {
+        "type": "networkmodel.simpleNetwork.simpleNetwork",
+        "file": "../geo/VideoDistributionModel/out/ec2_price.out",
+        "between_cost_dollar_GB": 0.01,
+        "full_stream_MBs": 0.25,
+        "compressed_stream_MBs": 0.0156
+    },
+    "route_model": {
+        "type": "routemodel.stayOnRoute.stayOnRoute"
+    },
+    "qoe_model": {
+        "type": "qoemodel.haversine.haversine"
+    },
+    "server_model": {
+        "type": "servermodel.nRandom.nRandom",
+        "update_interval": 600,
+        "number": XXXXXX
+    },
+    "output_models": [
+        {
+            "type": "outputmodel.basicDaily.basicDaily",
+            "file": "DAYTMPFILE"
+        },
+        {
+            "type": "outputmodel.outputCost.outputCost",
+            "file": "COSTTMPFILE"
+        },
+        {
+            "type": "outputmodel.sessionStats.sessionStats",
+            "file": "SESSTMPFILE",
+            "time": "daily"
+        },
+        {
+            "type": "outputmodel.qosPdf.qosPdf",
+            "file": "QOSTMPFILE",
+            "style": "quintile",
+            "time": "daily"
+        }
+    ],
+    "simulation_days": 100
+}

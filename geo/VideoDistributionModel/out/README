@@ -1,0 +1,15 @@
+Files which can be a direct input to streamsim
+
+mooc.out -- geo distribution for MOOC
+poker.out -- geo distribution for Poker
+fake_time.out -- synthetic time distribution over 24 hours
+cloudfront_price.out -- Amazon cloud front locations + prices
+manydc.out -- large number of datacentres + prices 
+Created from 
+nawk '{if (a==0) {printf("%%Lat Lon Zone InCost OutCost %% Placename\n");a=1} else{printf("%s, %s, %s, 0.0, 0.02 %% %s \n",$2,$3,$9,$11)}}' dcNodes.csv > manydc.out
+
+Other files
+
+ResultsWorldCities.csv -- Mooc and poker processed data
+dcNodes.csv -- large no of datacentres
+

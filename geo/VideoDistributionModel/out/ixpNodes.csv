@@ -1,0 +1,199 @@
+% Index	Latitude	Longitude	Country code	Subcontinental Zone code	Locality	IXP Name	Provider URL
+1	24.466667	54.36667	AE	ASC	Abu Dhabi	EMIX	http://www.datacentermap.com/ixp/emix.html
+2	-22.738789	-47.331913	BR	SAE	Americana	PTT-AME	http://www.datacentermap.com/ixp/ptt-ame.html
+3	52.366375	4.814758	NL	EUW	Amsterdam	AMS-IX	http://www.datacentermap.com/ixp/ams-ix.html
+4	52.366375	4.814758	NL	EUW	Amsterdam	NL-ix	http://www.datacentermap.com/ixp/nl-ix.html
+5	52.366375	4.814758	NL	EUW	Amsterdam	NetIX-AMS	http://www.datacentermap.com/ixp/netix-ams.html
+6	39.039986	-77.490005	US	NAN	Ashburn	EQIX-ASH	http://www.datacentermap.com/ixp/eqix-ash.html
+7	37.97918	23.716646	GR	EUE	Athens	GR-IX	http://www.datacentermap.com/ixp/gr-ix.html
+8	33.776863	-84.39697	US	NAN	Atlanta	PAIX-ATL	http://www.datacentermap.com/ixp/paix-atl.html
+9	33.776863	-84.39697	US	NAN	Atlanta	TIE-ATL	http://www.datacentermap.com/ixp/tie-atl.html
+10	-36.824677	174.76501	NZ	OCE	Auckland	APE	http://www.datacentermap.com/ixp/ape.html
+11	13.723419	100.476234	TH	ASP	Bangkok	PIE	http://www.datacentermap.com/ixp/pie.html
+12	41.383507	2.156067	ES	EUW	Barcelona	CATNIX	http://www.datacentermap.com/ixp/catnix.html
+13	-1.455021	-48.50237	BR	SAE	Belem	PTT-BEL	http://www.datacentermap.com/ixp/ptt-bel.html
+14	44.802418	20.465601	RS	EUE	Belgrade	NetIX-BEL	http://www.datacentermap.com/ixp/netix-bel.html
+15	-19.910824	-43.967285	BR	SAE	Belo Horizonte	PTT-MG	http://www.datacentermap.com/ixp/ptt-mg.html
+16	52.521236	13.408813	DE	EUW	Berlin	BCIX	http://www.datacentermap.com/ixp/bcix.html
+17	52.521236	13.408813	DE	EUW	Berlin	ECIX-BER	http://www.datacentermap.com/ixp/ecix-ber.html
+18	4.638616	-74.09248	CO	SAW	Bogota	NAP-CO	http://www.datacentermap.com/ixp/nap-co.html
+19	42.385937	-71.06094	US	NAN	Boston	BOSIX	http://www.datacentermap.com/ixp/bosix.html
+20	-15.780148	-47.92917	BR	SAE	Brasilia	FIX	http://www.datacentermap.com/ixp/fix.html
+21	-15.780148	-47.92917	BR	SAE	Brasilia	PTT-DF	http://www.datacentermap.com/ixp/ptt-df.html
+22	48.15097	17.126999	SK	EUE	Bratislava	SIX-SK	http://www.datacentermap.com/ixp/six-sk.html
+23	50.837166	4.364319	BE	EUW	Brussels	BNIX	http://www.datacentermap.com/ixp/bnix.html
+24	50.837166	4.364319	BE	EUW	Brussels	FreeBIX	http://www.datacentermap.com/ixp/freebix.html
+25	44.438683	26.093903	RO	EUE	Bucharest	BUHIX	http://www.datacentermap.com/ixp/buhix.html
+26	44.438683	26.093903	RO	EUE	Bucharest	InterLAN	http://www.datacentermap.com/ixp/interlan.html
+27	44.438683	26.093903	RO	EUE	Bucharest	RoNIX	http://www.datacentermap.com/ixp/ronix.html
+28	44.438683	26.093903	RO	EUE	Bucharest	Balcan-IX	http://www.datacentermap.com/ixp/balcan-ix.html
+29	44.438683	26.093903	RO	EUE	Bucharest	NetIX-BUC	http://www.datacentermap.com/ixp/netix-buc.html
+30	47.49308	19.050293	HU	EUE	Budapest	BIX	http://www.datacentermap.com/ixp/bix.html
+31	-34.615128	-58.422546	AR	SAE	Buenos Aires	NAP-Cabase	http://www.datacentermap.com/ixp/nap-cabase.html
+32	30.0571	31.2272	EG	AFR	Cairo	CAIX	http://www.datacentermap.com/ixp/caix.html
+33	-7.230718	-35.881664	BR	SAE	Campina Grande	PTT-CPV	http://www.datacentermap.com/ixp/ptt-cpv.html
+34	-22.907104	-47.06324	BR	SAE	Campinas	PTT-CAS	http://www.datacentermap.com/ixp/ptt-cas.html
+35	-35.28204	149.12859	AU	OCE	Canberra	ACT-IX	http://www.datacentermap.com/ixp/act-ix.html
+36	-33.98892	18.50647	ZA	AFR	Cape Town	CINX	http://www.datacentermap.com/ixp/cinx.html
+37	-33.98892	18.50647	ZA	AFR	Cape Town	NAPA-CT1	http://www.datacentermap.com/ixp/napa-ct1.html
+38	-29.167824	-51.179382	BR	SAE	Caxias do Sul	PTT-CXJ	http://www.datacentermap.com/ixp/ptt-cxj.html
+39	42.020733	-87.8302	US	NAN	Chicago	EQIX-CHI	http://www.datacentermap.com/ixp/eqix-chi.html
+40	42.020733	-87.8302	US	NAN	Chicago	ChIX	http://www.datacentermap.com/ixp/chix.html
+41	44.173332	28.638332	RO	EUE	Constanta	TomIX	http://www.datacentermap.com/ixp/tomix.html
+42	55.69307	12.490082	DK	EUW	Copenhagen	DIX	http://www.datacentermap.com/ixp/dix.html
+43	12.170911	-68.983154	CW	NAS	Curacao	CAR-IX	http://www.datacentermap.com/ixp/car-ix.html
+44	-25.428356	-49.27325	BR	SAE	Curitiba	PTT-PR	http://www.datacentermap.com/ixp/ptt-pr.html
+45	32.833443	-96.98181	US	NAN	Dallas	EQIX-DAL	http://www.datacentermap.com/ixp/eqix-dal.html
+46	32.833443	-96.98181	US	NAN	Dallas	PAIX-DAL	http://www.datacentermap.com/ixp/paix-dal.html
+47	32.833443	-96.98181	US	NAN	Dallas	TIE-DAL	http://www.datacentermap.com/ixp/tie-dal.html
+48	23.70992	90.40714	BD	ASS	Dhaka	BDIX	http://www.datacentermap.com/ixp/bdix.html
+49	53.34727	-6.278687	IE	EUW	Dublin	INEX	http://www.datacentermap.com/ixp/inex.html
+50	-29.857002	31.024794	ZA	AFR	Durban	NAPA-DB1	http://www.datacentermap.com/ixp/napa-db1.html
+51	51.165565	6.789551	DE	EUW	Düsseldorf	ECIX-DUS	http://www.datacentermap.com/ixp/ecix-dus.html
+52	51.165565	6.789551	DE	EUW	Düsseldorf	OCIX	http://www.datacentermap.com/ixp/ocix.html
+53	-20.241892	57.4896	MU	AFR	Ebene City	MIXP	http://www.datacentermap.com/ixp/mixp.html
+54	52.22154	6.893662	NL	EUW	Enschede	NDIX	http://www.datacentermap.com/ixp/ndix.html
+55	44.05207	-123.086754	US	NAN	Eugene	OIX	http://www.datacentermap.com/ixp/oix.html
+56	43.76873	11.256901	IT	EUW	Florence	TIX-IT	http://www.datacentermap.com/ixp/tix-it.html
+57	-27.596905	-48.549454	BR	SAE	Florianopolis	PTT-SC	http://www.datacentermap.com/ixp/ptt-sc.html
+58	-3.718394	-38.543396	BR	SAE	Fortaleza	PTT-CE	http://www.datacentermap.com/ixp/ptt-ce.html
+59	50.106487	8.536377	DE	EUW	Frankfurt	DE-CIX	http://www.datacentermap.com/ixp/de-cix.html
+60	50.106487	8.536377	DE	EUW	Frankfurt	KleyReX	http://www.datacentermap.com/ixp/kleyrex.html
+61	50.106487	8.536377	DE	EUW	Frankfurt	NetIX-FRA	http://www.datacentermap.com/ixp/netix-fra.html
+62	46.149395	6.130371	CH	EUW	Geneva	CIXP	http://www.datacentermap.com/ixp/cixp.html
+63	-16.677715	-49.26763	BR	SAE	Goiania	PTT-GYN	http://www.datacentermap.com/ixp/ptt-gyn.html
+64	57.709282	11.972351	SE	EUW	Gothenburg	Netnod-GBG	http://www.datacentermap.com/ixp/netnod-gbg.html
+65	57.709282	11.972351	SE	EUW	Gothenburg	GIX	http://www.datacentermap.com/ixp/gix.html
+66	-33.31056	26.52531	ZA	AFR	Grahamstown	GINX	http://www.datacentermap.com/ixp/ginx.html
+67	53.2159	6.559525	NL	EUW	Groningen	GN-IX	http://www.datacentermap.com/ixp/gn-ix.html
+68	53.514187	9.975586	DE	EUW	Hamburg	WORK-IX	http://www.datacentermap.com/ixp/work-ix.html
+69	53.514187	9.975586	DE	EUW	Hamburg	ECIX-HAM	http://www.datacentermap.com/ixp/ecix-ham.html
+70	21.02425	105.85469	VN	ASP	Hanoi	VNIX	http://www.datacentermap.com/ixp/vnix.html
+71	60.190697	24.936218	FI	EUE	Helsinki	FICIX	http://www.datacentermap.com/ixp/ficix.html
+72	22.372936	114.1246	HK	ASP	Hong Kong	EQIX-HKG	http://www.datacentermap.com/ixp/eqix-hkg.html
+73	22.372936	114.1246	HK	ASP	Hong Kong	HKIX	http://www.datacentermap.com/ixp/hkix.html
+74	17.385044	78.48667	IN	ASS	Hyderabad	NIXI	http://www.datacentermap.com/ixp/nixi.html
+75	41.01238	28.975925	TR	ASC	Istanbul	NetIX-IST	http://www.datacentermap.com/ixp/netix-ist.html
+76	-6.197515	106.83041	ID	ASP	Jakarta	IIX-ID	http://www.datacentermap.com/ixp/iix-id.html
+77	-26.12585	28.092041	ZA	AFR	Johannesburg	JINX	http://www.datacentermap.com/ixp/jinx.html
+78	-26.12585	28.092041	ZA	AFR	Johannesburg	NAPA-JB1	http://www.datacentermap.com/ixp/napa-jb1.html
+79	39.06398	-94.6225	US	NAN	Kansas City KS	KCIX	http://www.datacentermap.com/ixp/kcix.html
+80	41.72084	26.3204	TR	ASC	Kapitan Andreevo	NetIX-KAN	http://www.datacentermap.com/ixp/netix-kan.html
+81	27.702871	85.318245	NP	ASS	Kathmandu	NPIX	http://www.datacentermap.com/ixp/npix.html
+82	27.702871	85.318245	NP	ASS	Kathmandu	NPIX	http://www.datacentermap.com/ixp/npix.html
+83	50.45389	30.496674	UA	EUE	Kiev	UA-IX	http://www.datacentermap.com/ixp/ua-ix.html
+84	-4.330664	15.317688	CD	AFR	Kinshasa	KINIX	http://www.datacentermap.com/ixp/kinix.html
+85	6.453056	3.395833	NG	AFR	Lagos	IXPN	http://www.datacentermap.com/ixp/ixpn.html
+86	-12.043333	-77.028336	PE	SAW	Lima	NAP-Peru	http://www.datacentermap.com/ixp/nap-peru.html
+87	38.70266	-9.140625	PT	EUW	Lisbon	GigaPix	http://www.datacentermap.com/ixp/gigapix.html
+88	51.467697	-0.142822	GB	EUW	London	LINX	http://www.datacentermap.com/ixp/linx.html
+89	51.467697	-0.142822	GB	EUW	London	LONAP	http://www.datacentermap.com/ixp/lonap.html
+90	51.467697	-0.142822	GB	EUW	London	LIPEX	http://www.datacentermap.com/ixp/lipex.html
+91	51.467697	-0.142822	GB	EUW	London	NetIX-LON	http://www.datacentermap.com/ixp/netix-lon.html
+92	-23.29273	-51.173206	BR	SAE	Londrina	PTT-LDA	http://www.datacentermap.com/ixp/ptt-lda.html
+93	33.83848	-117.855835	US	NAN	Los Angeles	EQIX-LA	http://www.datacentermap.com/ixp/eqix-la.html
+94	33.83848	-117.855835	US	NAN	Los Angeles	LAIIX	http://www.datacentermap.com/ixp/laiix.html
+95	33.83848	-117.855835	US	NAN	Los Angeles	CIIX	http://www.datacentermap.com/ixp/ciix.html
+96	-8.813513	13.237476	AO	AFR	Luanda	ANG-IXP	http://www.datacentermap.com/ixp/ang-ixp.html
+97	65.58416	22.154749	FI	EUE	Lulea	Netnod-LUL	http://www.datacentermap.com/ixp/netnod-lul.html
+98	49.61071	6.122131	FR	EUW	Luxembourg	LIX	http://www.datacentermap.com/ixp/lix.html
+99	49.61071	6.122131	FR	EUW	Luxembourg	LU-CIX	http://www.datacentermap.com/ixp/lu-cix.html
+100	45.766563	4.838104	FR	EUW	Lyon	Lyonix	http://www.datacentermap.com/ixp/lyonix.html
+101	40.405132	-3.658447	ES	EUW	Madrid	ESpanix	http://www.datacentermap.com/ixp/espanix.html
+102	40.405132	-3.658447	ES	EUW	Madrid	TMRK-MAD	http://www.datacentermap.com/ixp/tmrk-mad.html
+103	14.55	121.03333	PH	ASP	Makati City	PHOpenIX	http://www.datacentermap.com/ixp/phopenix.html
+104	55.592316	13.010559	SE	EUW	Malmö	Netnod-MMO	http://www.datacentermap.com/ixp/netnod-mmo.html
+105	55.592316	13.010559	SE	EUW	Malmö	MalmIX	http://www.datacentermap.com/ixp/malmix.html
+106	-3.106409	-60.02643	BR	SAE	Manaus	PTT-MAO	http://www.datacentermap.com/ixp/ptt-mao.html
+107	53.48028	-2.248077	GB	EUW	Manchester	MaNAP	http://www.datacentermap.com/ixp/manap.html
+108	-25.968945	32.56955	MZ	AFR	Maputo	Moz-ix	http://www.datacentermap.com/ixp/moz-ix.html
+109	42.327877	-122.86829	US	NAN	Medford	SOAX	http://www.datacentermap.com/ixp/soax.html
+110	-37.87485	145.0415	AU	OCE	Melbourne	AUSIX	http://www.datacentermap.com/ixp/ausix.html
+111	25.785053	-80.24414	US	NAN	Miami	TMRK-MIA	http://www.datacentermap.com/ixp/tmrk-mia.html
+112	45.4688	9.177704	IT	EUW	Milan	MIX-IT	http://www.datacentermap.com/ixp/mix-it.html
+113	45.4688	9.177704	IT	EUW	Milan	MINAP	http://www.datacentermap.com/ixp/minap.html
+114	44.964798	-93.20801	US	NAN	Minneapolis	MICE	http://www.datacentermap.com/ixp/mice.html
+115	45.521744	-73.67432	CA	NAN	Montreal	PIX-MON	http://www.datacentermap.com/ixp/pix-mon.html
+116	45.521744	-73.67432	CA	NAN	Montreal	QIX	http://www.datacentermap.com/ixp/qix.html
+117	55.739483	37.619934	RU	EUE	Moscow	MSK-IX	http://www.datacentermap.com/ixp/msk-ix.html
+118	35.897778	14.489444	IT	EUW	Msida	MIX-MA	http://www.datacentermap.com/ixp/mix-ma.html
+119	48.13677	11.557617	DE	EUW	Munich	INXS	http://www.datacentermap.com/ixp/inxs.html
+120	-1.274359	36.813107	KE	AFR	Nairobi	KIXP	http://www.datacentermap.com/ixp/kixp.html
+121	-5.794479	-35.210953	BR	SAE	Natal	PTT-NAT	http://www.datacentermap.com/ixp/ptt-nat.html
+122	40.76182	-73.92288	US	NAN	New York	EQIX-NYC	http://www.datacentermap.com/ixp/eqix-nyc.html
+123	40.76182	-73.92288	US	NAN	New York	NYIIX	http://www.datacentermap.com/ixp/nyiix.html
+124	40.76182	-73.92288	US	NAN	New York	Big-APE	http://www.datacentermap.com/ixp/big-ape.html
+125	40.76182	-73.92288	US	NAN	New York	PAIX-NYC	http://www.datacentermap.com/ixp/paix-nyc.html
+126	40.76182	-73.92288	US	NAN	New York	TIE-NYC	http://www.datacentermap.com/ixp/tie-nyc.html
+127	49.44313	11.070099	DE	EUW	Nuremberg	N-IX	http://www.datacentermap.com/ixp/n-ix.html
+128	34.693737	135.50217	JP	ASP	Osaka	JPNAP-OSA	http://www.datacentermap.com/ixp/jpnap-osa.html
+129	59.908222	10.739136	NO	EUW	Oslo	NIX	http://www.datacentermap.com/ixp/nix.html
+130	59.908222	10.739136	NO	EUW	Oslo	FIXO	http://www.datacentermap.com/ixp/fixo.html
+131	45.41157	-75.6982	CA	NAN	Ottawa	OttIX	http://www.datacentermap.com/ixp/ottix.html
+132	37.432343	-122.1508	US	NAN	Palo Alto	PAIX-PAO	http://www.datacentermap.com/ixp/paix-pao.html
+133	48.839413	2.334595	FR	EUW	Paris	SFINX	http://www.datacentermap.com/ixp/sfinx.html
+134	48.839413	2.334595	FR	EUW	Paris	POUIX	http://www.datacentermap.com/ixp/pouix.html
+135	48.839413	2.334595	FR	EUW	Paris	EQIX-PAR	http://www.datacentermap.com/ixp/eqix-par.html
+136	48.839413	2.334595	FR	EUW	Paris	France-IX	http://www.datacentermap.com/ixp/france-ix.html
+137	48.839413	2.334595	FR	EUW	Paris	NetIX-PAR	http://www.datacentermap.com/ixp/netix-par.html
+138	-31.982452	115.86731	AU	OCE	Perth	WAIX	http://www.datacentermap.com/ixp/waix.html
+139	11.558831	104.91744	KH	ASP	Phnom Penh	HTN-CIX	http://www.datacentermap.com/ixp/htn-cix.html
+140	33.461235	-111.997375	US	NAN	Phoenix	PHX-IX	http://www.datacentermap.com/ixp/phx-ix.html
+141	33.461235	-111.997375	US	NAN	Phoenix	TIE-PHX	http://www.datacentermap.com/ixp/tie-phx.html
+142	40.438587	-79.94476	US	NAN	Pittsburgh	PitX	http://www.datacentermap.com/ixp/pitx.html
+143	45.494797	-122.63626	US	NAN	Portland	NWAX	http://www.datacentermap.com/ixp/nwax.html
+144	-30.027704	-51.228737	BR	SAE	Porto Alegre	PTT-RS	http://www.datacentermap.com/ixp/ptt-rs.html
+145	50.082703	14.420242	CZ	EUW	Prague	NIX-CZ	http://www.datacentermap.com/ixp/nix-cz.html
+146	14.633333	121.03333	PH	ASP	Quezon City	PHNET-CORE	http://www.datacentermap.com/ixp/phnet-core.html
+147	-8.054277	-34.881256	BR	SAE	Recife	PTT-PE	http://www.datacentermap.com/ixp/ptt-pe.html
+148	64.13534	-21.89521	IS	EUW	Reykjavik	RIX	http://www.datacentermap.com/ixp/rix.html
+149	-22.90354	-43.209587	BR	SAE	Rio de Janeiro	PTT-RJ	http://www.datacentermap.com/ixp/ptt-rj.html
+150	41.895466	12.482324	IT	EUW	Rome	NaMeX	http://www.datacentermap.com/ixp/namex.html
+151	51.919285	4.468689	NL	EUW	Rotterdam	R-IX	http://www.datacentermap.com/ixp/r-ix.html
+152	43.84958	25.955229	BG	EUE	Ruse	NetIX-RUS	http://www.datacentermap.com/ixp/netix-rus.html
+153	-12.970382	-38.512383	BR	SAE	Salvador	PTT-BA	http://www.datacentermap.com/ixp/ptt-ba.html
+154	37.790253	-122.40143	US	NAN	San Francisco	SFMIX	http://www.datacentermap.com/ixp/sfmix.html
+155	37.339592	-121.94687	US	NAN	San Jose	EQIX-SJC	http://www.datacentermap.com/ixp/eqix-sjc.html
+156	18.42229	-66.09512	PR	NAS	San Juan	IX-PR	http://www.datacentermap.com/ixp/ix-pr.html
+157	-33.449776	-70.65445	CL	SAW	Santiago	NAP-CL	http://www.datacentermap.com/ixp/nap-cl.html
+158	-20.82018	-49.37968	BR	SAE	Sao Jose do Rio Preto	PTT-SJP	http://www.datacentermap.com/ixp/ptt-sjp.html
+159	-23.17908	-45.88725	BR	SAE	Sao Jose dos Campos	PTT-SJC	http://www.datacentermap.com/ixp/ptt-sjc.html
+160	-23.548943	-46.638817	BR	SAE	Sao Paulo	PTT-SP	http://www.datacentermap.com/ixp/ptt-sp.html
+161	47.60246	-122.34924	US	NAN	Seattle	SIX	http://www.datacentermap.com/ixp/six.html
+162	47.60246	-122.34924	US	NAN	Seattle	PAIX-SEA	http://www.datacentermap.com/ixp/paix-sea.html
+163	3.310534	101.46973	MY	ASP	Selangor	MyIX	http://www.datacentermap.com/ixp/myix.html
+164	37.566536	126.97797	KR	ASP	Seoul	KINX	http://www.datacentermap.com/ixp/kinx.html
+165	1.300052	103.85445	SG	ASP	Singapore	EQIX-SIN	http://www.datacentermap.com/ixp/eqix-sin.html
+166	1.300052	103.85445	SG	ASP	Singapore	SOX	http://www.datacentermap.com/ixp/sox.html
+167	42.00381	21.452246	MK	EUE	Skopje	NetIX-SKO	http://www.datacentermap.com/ixp/netix-sko.html
+168	42.703632	23.345947	BG	EUE	Sofia	NetIX-SOF	http://www.datacentermap.com/ixp/netix-sof.html
+169	59.328987	18.07251	SE	EUW	Stockholm	Netnod-STH	http://www.datacentermap.com/ixp/netnod-sth.html
+170	59.328987	18.07251	SE	EUW	Stockholm	Solix	http://www.datacentermap.com/ixp/solix.html
+171	59.328987	18.07251	SE	EUW	Stockholm	STHIX	http://www.datacentermap.com/ixp/sthix.html
+172	62.390835	17.306915	SE	EUW	Sundsvall	Netnod-SVL	http://www.datacentermap.com/ixp/netnod-svl.html
+173	-7.289166	112.7344	ID	ASP	Surabaya	OD-IX	http://www.datacentermap.com/ixp/od-ix.html
+174	-33.870415	151.16913	AU	OCE	Sydney	EQIX-SYD	http://www.datacentermap.com/ixp/eqix-syd.html
+175	59.4119	24.739838	EE	EUE	Tallinn	TIX-ES	http://www.datacentermap.com/ixp/tix-es.html
+176	27.953165	-82.54303	US	NAN	Tampa	TampaIX	http://www.datacentermap.com/ixp/tampaix.html
+177	61.49798	23.76493	FI	EUE	Tampere	TREX	http://www.datacentermap.com/ixp/trex.html
+178	32.076176	34.7937	IL	ASC	Tel Aviv	IIX-IL	http://www.datacentermap.com/ixp/iix-il.html
+179	35.85344	139.87244	JP	ASP	Tokyo	EQIX-TYO	http://www.datacentermap.com/ixp/eqix-tyo.html
+180	35.85344	139.87244	JP	ASP	Tokyo	JPIX	http://www.datacentermap.com/ixp/jpix.html
+181	35.85344	139.87244	JP	ASP	Tokyo	JPNAP-TYO1	http://www.datacentermap.com/ixp/jpnap-tyo1.html
+182	35.85344	139.87244	JP	ASP	Tokyo	JPNAP-TYO2	http://www.datacentermap.com/ixp/jpnap-tyo2.html
+183	45.06576	7.661591	IT	EUW	Torino	TOP-IX	http://www.datacentermap.com/ixp/top-ix.html
+184	43.723476	-79.420166	CA	NAN	Toronto	TORIX	http://www.datacentermap.com/ixp/torix.html
+185	43.723476	-79.420166	CA	NAN	Toronto	PIX-TOR	http://www.datacentermap.com/ixp/pix-tor.html
+186	49.188885	-122.81616	CA	NAN	Vancouver	PIX-VAN	http://www.datacentermap.com/ixp/pix-van.html
+187	48.15143	16.347656	AT	EUW	Vienna	VIX	http://www.datacentermap.com/ixp/vix.html
+188	48.15143	16.347656	AT	EUW	Vienna	PAIX-VIR	http://www.datacentermap.com/ixp/paix-vir.html
+189	-20.31536	-40.301765	BR	SAE	Vitoria	PTT-VIX	http://www.datacentermap.com/ixp/ptt-vix.html
+190	52.229675	21.01223	PL	EUE	Warsaw	PLIX	http://www.datacentermap.com/ixp/plix.html
+191	52.229675	21.01223	PL	EUE	Warsaw	WIX-PL	http://www.datacentermap.com/ixp/wix-pl.html
+192	52.229675	21.01223	PL	EUE	Warsaw	Thinx	http://www.datacentermap.com/ixp/thinx.html
+193	52.229675	21.01223	PL	EUE	Warsaw	NetIX-WAR	http://www.datacentermap.com/ixp/netix-war.html
+194	-41.28648	174.77621	NZ	OCE	Wellington	WIX-NZ	http://www.datacentermap.com/ixp/wix-nz.html
+195	49.88608	-97.15292	CA	NAN	Winnipeg	WPGIX	http://www.datacentermap.com/ixp/wpgix.html
+196	45.815006	15.978501	HR	EUE	Zagreb	CIX	http://www.datacentermap.com/ixp/cix.html
+197	47.39463	8.524017	CH	EUW	Zürich	SwissIX	http://www.datacentermap.com/ixp/swissix.html
+198	47.39463	8.524017	CH	EUW	Zürich	EQIX-ZRH	http://www.datacentermap.com/ixp/eqix-zrh.html
