@@ -76,6 +76,6 @@ g<-ggplot(combined,aes(x=noservers)) + theme_opts +
         guide_legend(title=element_blank())) +
     guides(shape= 
         guide_legend(title=element_blank())) +        
-    xlab("Number of servers") +
+    xlab("Number of cloud hosts/session") +
     ylab("Mean cost per user hour ($)")
 ggsave(outfilename,width=6.0,height=4.0)

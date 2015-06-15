@@ -38,6 +38,6 @@ g<-ggplot(random,aes(x=noservers)) + theme_opts +
     width=wid) +
     geom_line(aes(x=noservers+dodge[1],y=utotcost))+
     geom_point(aes(x=noservers+dodge[1],y=utotcost)) +
-    xlab("Number of servers") +
+    xlab("Number of cloud hosts/session") +
     ylab("Mean cost per user hour $")
 ggsave(outfilename,width=6.0,height=2.05)

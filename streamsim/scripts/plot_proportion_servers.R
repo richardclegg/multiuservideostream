@@ -46,6 +46,6 @@ g<-ggplot(random,aes(x=noservers)) + theme_opts +
     scale_colour_manual(breaks=c("a","b","c"),
         values=allcols, labels=c("random","static","dynamic"),
         guide = guide_legend(title = element_blank())) + 
-    xlab("Number of servers") +
+    xlab("Number of cloud hosts/session") +
     ylab("% managed net")
 ggsave(outfilename,width=6.0,height=2.05)
