@@ -47,7 +47,8 @@ src/createNStatic.py scripts/mooc_base.json 6 1000 > scripts/mooc_static.out
 5) Singapore
 6) Sao Paolo, Brazil
 
-src/createNStatic.py scripts/poker_largedc_base.json 6 1000 > scripts/poker_largedc_static.out
+#For the large DC version makes sense to run more.
+src/createNStatic.py scripts/poker_largedc_base.json 10 1000 > scripts/poker_largedc_static.out
 
 
 src/timeOrderCreateNStatic.py scripts/poker_base.json 6 1000 > scripts/poker_static_time.out

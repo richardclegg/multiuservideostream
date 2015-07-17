@@ -11,7 +11,7 @@ TMPDAYFILE="/tmp/poker_var_day_$RND.out"
 TMPSESSFILE="/tmp/poker_var_sess_$RND.out"
 TMPQOSFILE="/tmp/poker_var_qos_$RND.out"
 rm -f $OUT_FILE
-for servers in `seq 6`; do
+for servers in `seq 10`; do
     sed -e "s/XXXXXX/$servers/g" $IN_FILE | sed -e "s%DAYTMPFILE%$TMPDAYFILE%g" | sed -e "s%COSTTMPFILE%$TMPCOSTFILE%g" | sed -e "s%QOSTMPFILE%$TMPQOSFILE%g" | sed -e "s%SESSTMPFILE%$TMPSESSFILE%g"> $TMPJSONFILE
     src/streamsim.py $TMPJSONFILE
     echo -n $servers "" >> $OUT_FILE
