@@ -1,0 +1,15 @@
+% http://aws.amazon.com/ec2/pricing/ c3.8 large instance on demand
+% Data assuming largest data volume
+% https://github.com/turnkeylinux/aws-datacenters/blob/master/input/datacenters
+%Amazon EC2 Locations  Lat long cost_in_$/GB cost_out_$/GB cost/instance 
+39.043758, -77.487442, 0.0, 0.05, 1.68 % Ashburn VA (US East)
+45.7788	-119.5290, 0.0 0.05 1.68 % US West (Oregon)
+37.441883, -122.143021, 0.0, 0.05, 1.68 %Palo Alto CA (US West Northern California)
+53.344105, -6.267494, 0.0, 0.05, 1.912 % Dublin (EU Ireland)
+50.115520477295, 8.6841697692871, 0.0, 0.05, 2.064 % Frankfurt (EU Frankfurt)
+1.3568, 103.989098, 0.0, 0.08, 2.117 % Asia Pacific(Singapore)	   
+35.689487, 139.691711, 0.0, 0.12, 2.043 % Asia Pacific Tokyo	
+-33.86, 151.2, 0.0, 0.12, 2.117 % Asia Pacific (Sydney)
+37.4536	126.7317, 0.0, 0.108, 1.91 % Asia Pacific (Seoul)   
+-23.548943, -46.638817, 0.0, 0.19, 2.6 % South America (São Paulo)
+
