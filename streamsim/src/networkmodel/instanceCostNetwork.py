@@ -65,19 +65,20 @@ class instanceCostNetwork (networkModel.networkModel):
             sys.exit()
         self.nodes=[]
         while True:
-            l= f.readline()
-            if l == '':
+            origline= f.readline()
+            if origline == '':
                 break
             #Skip blank lines and comments
-            if l[0] == '\n' or l[0] == '#' or l[0] == '%':
+            if origline[0] == '\n' or origline[0] == '#' or origline[0] == '%':
                 continue
-            l=l.split('%')[0].split('#')[0] # strip comments
+            l=origline.split('%')[0].split('#')[0] # strip comments
             parts= l.split(",")
             if len(parts) != 4 and len(parts) != 5:
                 print >> sys.stderr,"Lines in instanceCostNetwork file", \
                     netFName,' are expected to be 5 tuple floats or ', \
                     ' 6 tuple with zone string as third arg', \
                     'specified in JSON',fName
+                print >> sys.stderr,'Line',origline
                 raise ValueError
             try:
                 loc= (float(parts[0]),float(parts[1]))
@@ -93,8 +94,9 @@ class instanceCostNetwork (networkModel.networkModel):
                     instcost= float(parts[4])
             except:
                 print >> sys.stderr,"Lines in instanceCostNetwork file", \
-                    netFName,' are expected to be 4 tuple floats', \
-                    'specified in JSON',fName
+                    netFName,' are expect to have loc then in, out and ',\
+                    'instcost in ',fName
+                print >> sys.stderr,'Line',origline
                 raise ValueError
             if loc[0] < -90 or loc[0] > 90 or loc[1] < -180 or \
                 loc[1] > 180:
@@ -102,9 +104,11 @@ class instanceCostNetwork (networkModel.networkModel):
                     '[-90,90],[-180,180] respectively in',netFName, \
                     'referenced from JSON',fName
                 raise ValueError
-            if incost < 0 or outcost < 0 or instcost:
+            if incost < 0 or outcost < 0 or instcost < 0:
                 print >> sys.stderr,'Specified costs must be +ve'\
                      'in',netFName, 'referenced from JSON',fName
+                print >> sys.stderr,'line',origline
+                print >> sys.stderr,'parts',parts
                 raise ValueError
             self.nodes.append(datacentre.datacentre( \
                 location.location(loc[0],loc[1],zone), \
