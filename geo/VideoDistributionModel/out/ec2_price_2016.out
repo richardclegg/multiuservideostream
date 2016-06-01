@@ -1,15 +1,14 @@
 % http://aws.amazon.com/ec2/pricing/ c3.8 large instance on demand
 % Data assuming largest data volume
 % https://github.com/turnkeylinux/aws-datacenters/blob/master/input/datacenters
-%Amazon EC2 Locations  Lat long cost_in_$/GB cost_out_$/GB cost/instance 
-39.043758, -77.487442, 0.0, 0.05, 1.68 % Ashburn VA (US East)
-45.7788,	-119.5290, 0.0, 0.05, 1.68 % US West (Oregon)
-37.441883, -122.143021, 0.0, 0.05, 1.68 %Palo Alto CA (US West Northern California)
-53.344105, -6.267494, 0.0, 0.05, 1.912 % Dublin (EU Ireland)
-50.115520477295, 8.6841697692871, 0.0, 0.05, 2.064 % Frankfurt (EU Frankfurt)
-1.3568, 103.989098, 0.0, 0.08, 2.117 % Asia Pacific(Singapore)	   
-35.689487, 139.691711, 0.0, 0.12, 2.043 % Asia Pacific Tokyo	
--33.86, 151.2, 0.0, 0.12, 2.117 % Asia Pacific (Sydney)
-37.4536,	126.7317, 0.0, 0.108, 1.91 % Asia Pacific (Seoul)   
--23.548943, -46.638817, 0.0, 0.19, 2.6 % South America (São Paulo)
-
+% Amazon EC2 Locations  Lat long cost_in_$/GB cost_out_$/GB cost/instance 
+39.018,	    -77.539, 0.0, 0.05, 1.68 % Ashburn VA -- ec2.us-east-1.amazonaws.com
+45.7788,	-119.529, 0.0, 0.05, 1.68 % Oregon -- ec2.us-west-2.amazonaws.com
+37.3394,	-121.895, 0.0, 0.05, 1.68 % Palo Alto -- ec2.us-west-1.amazonaws.com
+53.3331, 	-6.2489, 0.0, 0.05, 1.912 % Dublin -- ec2.eu-west-1.amazonaws.com
+50.1167,	8.6833, 0.0, 0.05, 2.064 % Frankfurt -- ec2.eu-central-1.amazonaws.com
+1.2931,	    103.8558, 0.0, 0.08, 2.117 % Singapore -- ec2.ap-southeast-1.amazonaws.com	   
+35.6845,	139.7559, 0.0, 0.12, 2.043 % Tokyo -- ec2.ap-northeast-1.amazonaws.com
+-33.8615,	151.2055, 0.0, 0.12, 2.117 % Sydney -- ec2.ap-southeast-2.amazonaws.com
+37.4536,	126.7317, 0.0, 0.108, 1.91 % Seoul  -- ec2.ap-northeast-2.amazonaws.com
+-23.4733,	-46.6658, 0.0, 0.19, 2.6 % São Paulo -- ec2.sa-east-1.amazonaws.com

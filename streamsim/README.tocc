@@ -1,0 +1,8 @@
+Scripts to generate Trans on Cloud Computing paper
+
+scripts/plot_clusters.R creates graphs/cluster_plot.pdf 
+
+% Create output for static configs
+src/createNStatic.py toccscripts/poker_base.json 10 1000 > toccscripts/poker_static.out
+src/createNStatic.py toccscripts/mooc_base.json 10 1000 > toccscripts/mooc_static.out
+src/createNStatic.py toccscripts/poker_largedc.json 10 1000 > toccscripts/poker_largedc_static.out
