@@ -10,3 +10,4 @@ src/createNStatic.py toccscripts/poker_largedc.json 10 1000 > toccscripts/poker_
 # Poker vary number of servers results
 
 scripts/poker_var_servers.sh
+scripts/mooc_var_servers.sh

@@ -17,7 +17,8 @@
          "file": "../geo/VideoDistributionModel/out/ec2_price_2016.out",
         "between_cost_dollar_GB": 0.01,
         "full_stream_MBs": 0.25,
-        "compressed_stream_MBs": 0.0156
+        "compressed_stream_MBs": 0.0156,
+        "users_per_instance": 30
     },
     "route_model": {
         "type": "routemodel.stayOnRoute.stayOnRoute"

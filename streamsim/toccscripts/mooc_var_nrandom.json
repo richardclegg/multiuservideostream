@@ -1,16 +1,14 @@
 {
 	"demand_model": {
         "type": "demandmodel.poisLogDemand.poisLogDemand",
-        "locations": "../geo/VideoDistributionModel/out/poker.out",
-        "time_demand": "../geo/VideoDistributionModel/out/poker_time.out",
-        "mean_daily_arrivals": 10000,
-        "session_mean": 3015.0,
-        "session_sigma": 0.66886
+        "locations": "../geo/VideoDistributionModel/out/mooc.out",
+        "time_demand": "../geo/VideoDistributionModel/out/mooc_time.out",
+        "mean_daily_arrivals": 1000,
+        "session_mean": 1620.0,
+        "session_sigma": 0.8
     },
     "session_model": {
-        "type": "sessionmodel.pokerModel.pokerModel",
-        "max_room": 10,
-        "min_room": 4
+        "type": "sessionmodel.moocModel.moocModel"
     },
     "network_model": {
          "type": "networkmodel.instanceCostNetwork.instanceCostNetwork",
@@ -27,8 +25,8 @@
         "type": "qoemodel.haversine.haversine"
     },
     "server_model": {
-        "type": "servermodel.nStatic.nStatic",
-        "file": "toccscripts/poker_static.out",
+        "type": "servermodel.nRandom.nRandom",
+        "update_interval": 600,
         "number": XXXXXX
     },
     "output_models": [
