@@ -13,3 +13,8 @@ nohup toccscripts/poker_var_servers.sh > tocc_poker_var_servers.nohup &
 nohup toccscripts/mooc_var_servers.sh > tocc_mooc_var_servers.nohup &
 # Poker vary number of users results
 nohup toccscripts/poker_var_user.sh > tocc_poker_var_users.nohup &
+
+# Base case with stay-on-route strategy
+nohup toccscripts/poker_var_stay.sh > tocc_poker_var_stay.nohup &
+# Base case with potato strategy
+nohup toccscripts/poker_var_potato.sh > tocc_poker_var_potato.nohup &
