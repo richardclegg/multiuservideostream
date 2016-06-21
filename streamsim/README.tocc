@@ -8,6 +8,8 @@ src/createNStatic.py toccscripts/mooc_base.json 10 1000 > toccscripts/mooc_stati
 src/createNStatic.py toccscripts/poker_largedc.json 10 1000 > toccscripts/poker_largedc_static.out
 
 # Poker vary number of servers results
-
-scripts/poker_var_servers.sh
-scripts/mooc_var_servers.sh
+nohup toccscripts/poker_var_servers.sh > tocc_poker_var_servers.nohup &
+# Mooc vary number of servers results
+nohup toccscripts/mooc_var_servers.sh > tocc_mooc_var_servers.nohup &
+# Poker vary number of users results
+nohup toccscripts/poker_var_user.sh > tocc_poker_var_users.nohup &
