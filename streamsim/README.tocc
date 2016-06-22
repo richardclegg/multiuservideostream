@@ -1,4 +1,4 @@
-bnScripts to generate Trans on Cloud Computing paper
+Scripts to generate Trans on Cloud Computing paper
 
 scripts/plot_clusters.R creates graphs/cluster_plot.pdf 
 
