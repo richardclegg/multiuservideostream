@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-# Run from directory ABOVE scripts
+# Run from directory ABOVE toccscripts
 
 OUT_FILE="data/mooc_var_ndynamic.out"
-IN_FILE="scripts/mooc_var_ndynamic.json"
-SCRIPT=scripts/meansd.py
+IN_FILE="toccscripts/mooc_var_ndynamic.json"
+SCRIPT=toccscripts/meansd.py
 RND=$RANDOM
 TMPJSONFILE="/tmp/mooc_var_$RND.json"
 TMPCOSTFILE="/tmp/mooc_var_cost_$RND.out"
@@ -25,7 +25,7 @@ rm -f $TMPJSONFILE $TMPCOSTFILE $TMPDAYFILE $TMPQOSFILE
 done
 
 OUT_FILE="data/mooc_var_nstatic.out"
-IN_FILE="scripts/mooc_var_nstatic.json"
+IN_FILE="toccscripts/mooc_var_nstatic.json"
 rm -f $OUT_FILE
 for servers in `seq 10`; do
     sed -e "s/XXXXXX/$servers/g" $IN_FILE | sed -e "s%DAYTMPFILE%$TMPDAYFILE%g" | sed -e "s%COSTTMPFILE%$TMPCOSTFILE%g" | sed -e "s%QOSTMPFILE%$TMPQOSFILE%g" | sed -e "s%SESSTMPFILE%$TMPSESSFILE%g"> $TMPJSONFILE
@@ -42,7 +42,7 @@ done
 
 
 OUT_FILE="data/mooc_var_nrandom.out"
-IN_FILE="scripts/mooc_var_nrandom.json"
+IN_FILE="toccscripts/mooc_var_nrandom.json"
 rm -f $OUT_FILE
 for servers in `seq 10`; do
     sed -e "s/XXXXXX/$servers/g" $IN_FILE | sed -e "s%DAYTMPFILE%$TMPDAYFILE%g" | sed -e "s%COSTTMPFILE%$TMPCOSTFILE%g" | sed -e "s%QOSTMPFILE%$TMPQOSFILE%g" | sed -e "s%SESSTMPFILE%$TMPSESSFILE%g"> $TMPJSONFILE
