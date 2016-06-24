@@ -57,6 +57,10 @@ class instanceCostNetwork (networkModel.networkModel):
                 'contain nnumber of users per instance as int', \
                 '"users_per_instance"'
             raise ValueError            
+        self.parseInstCostFile(netFName,fName)
+
+    def parseInstCostFile(self,netFName,fName):
+        """ Read the network file that contains locations and prices"""
         try:
             f= open(netFName)
         except IOError:

@@ -2,10 +2,16 @@ Scripts to generate Trans on Cloud Computing paper
 
 scripts/plot_clusters.R creates graphs/cluster_plot.pdf 
 
+# Create 2016 pricing for many data centre situation
+
+src/price_nearest.py ../geo/VideoDistributionModel/out/ec2_price_2016.out  ../geo/VideoDistributionModel/out/manydc.out 3 > ../geo/VideoDistributionModel/out/manydc_2016.out
+
 # Create output for static configs
+# Already done and in repos 
 src/createNStatic.py toccscripts/poker_base.json 10 1000 > toccscripts/poker_static.out
 src/createNStatic.py toccscripts/mooc_base.json 10 1000 > toccscripts/mooc_static.out
 src/createNStatic.py toccscripts/poker_largedc.json 10 1000 > toccscripts/poker_largedc_static.out
+
 
 # Poker vary number of servers results
 nohup toccscripts/poker_var_servers.sh > tocc_poker_var_servers.nohup &
