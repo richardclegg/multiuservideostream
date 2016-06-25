@@ -24,3 +24,5 @@ nohup toccscripts/poker_var_user.sh > tocc_poker_var_users.nohup &
 nohup toccscripts/poker_var_stay.sh > tocc_poker_var_stay.nohup &
 # Base case with potato strategy
 nohup toccscripts/poker_var_potato.sh > tocc_poker_var_potato.nohup &
+# Poker large data center
+nohup toccscripts/poker_largedc.sh > tocc_poker_largedc.nohup &
