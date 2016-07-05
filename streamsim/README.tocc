@@ -26,3 +26,8 @@ nohup toccscripts/poker_var_stay.sh > tocc_poker_var_stay.nohup &
 nohup toccscripts/poker_var_potato.sh > tocc_poker_var_potato.nohup &
 # Poker large data center
 nohup toccscripts/poker_largedc.sh > tocc_poker_largedc.nohup &
+
+
+# How to plot graphs
+
+Rscript toccscripts/plot_cost_servers.R toccdata/poker_var_nrandom.out toccdata/poker_var_nstatic.out toccdata/poker_var_ndynamic.out 10000 0.84 graphs/poker_var_servers_cost.pdf
