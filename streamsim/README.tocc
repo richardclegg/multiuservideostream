@@ -31,3 +31,7 @@ nohup toccscripts/poker_largedc.sh > tocc_poker_largedc.nohup &
 # How to plot graphs
 
 Rscript toccscripts/plot_cost_servers.R toccdata/poker_var_nrandom.out toccdata/poker_var_nstatic.out toccdata/poker_var_ndynamic.out 10000 0.84 graphs/poker_var_servers_cost.pdf
+
+Rscript toccscripts/plot_cost_servers.R toccdata/mooc_var_nrandom.out toccdata/mooc_var_nstatic.out toccdata/mooc_var_ndynamic.out 10000 1.0 graphs/mooc_var_servers_cost.pdf
+
+
