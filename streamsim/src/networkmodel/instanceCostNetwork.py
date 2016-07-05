@@ -16,7 +16,7 @@ class instanceCostNetwork (networkModel.networkModel):
         self.betweenCost= 0.0   #Cost per MB between data centres
         self.fullStream= 1.0    #Bandwidth of full_stream in MB
         self.compressedStream=0.2    #Bandwidth of compressed_stream
-        self.usersPerInstance=100 #Users per instance
+        self.MBPerInstance=10000 #MB per instance
 
     def parseJSON(self,js,fName):
         """ parse the JSON in file fName which
@@ -51,7 +51,7 @@ class instanceCostNetwork (networkModel.networkModel):
                 '"compressed_stream_MBs"'
             raise ValueError
         try:
-            self.usersPerInstance= int(js.pop("users_per_instance"))
+            self.MBPerInstance= int(js.pop("MB_per_instance"))
         except ValueError:
             print >> sys.stderr,"JSON for instanceCostNetwork must",\
                 'contain nnumber of users per instance as int', \
@@ -147,34 +147,43 @@ class instanceCostNetwork (networkModel.networkModel):
             # and once between a user and a router 
             rdict={}  # Dictionary of links between routers
             indict={}  # Dictionary of links from server to router.
+            cpuCost= 0.0
+            if routeMod.symmetric():
+                factor=2
+            else: 
+                factor=1
             for r in session.getRoutes():
 				# If we never saw r[0]--r[1] add inbound cost
                 if not indict.has_key((r[0],r[1])):
                     indict[(r[0],r[1])]= True
                     host2net+= r[1].inCost*self.fullStream
+                    cpuCost+= r[1].instCost*self.fullStream/self.MBPerInstance
                 # Add route out bound cost
                 net2host+= r[-2].outCost*partStream
-                
+                cpuCost+= r[-2].instCost*partStream/self.MBPerInstance
                 # If routing is symmetric this route counts for
                 # both directions -- so also add return costs
                 # in same way
                 if routeMod.symmetric():
-					net2host+= r[1].outCost*partStream
-					if not indict.has_key((r[-1],r[-2])):
-						indict[(r[-1],r[-2])]= True
-						host2net+= r[-2].inCost*self.fullStream                
-					
+                    net2host+= r[1].outCost*partStream
+                    cpuCost+= r[1].instCost*partStream/self.MBPerInstance
+                    if not indict.has_key((r[-1],r[-2])):
+                        indict[(r[-1],r[-2])]= True
+                        host2net+= r[-2].inCost*self.fullStream    
+                        cpuCost+= r[-2].instCost*self.fullStream/self.MBPerInstance                
                 if len(r) > 3:
                     for i in range(1,len(r)-2):
                         if not rdict.has_key((r[0],r[i],r[i+1])):
                             rdict[(r[0],r[i],r[i+1])]= True
                             net2net+=self.betweenCost*partStream
+                            cpuCost+= r[i].instCost*partStream/self.MBPerInstance
                             if routeMod.symmetric():
-								rdict[(r[-1],r[i+1],r[i])]= True
-								net2net+=self.betweenCost*partStream
+                                rdict[(r[-1],r[i+1],r[i])]= True
+                                net2net+=self.betweenCost*partStream
+                                cpuCost+= r[i+1].instCost*partStream/self.MBPerInstance
             #1000 factor because data transfer in MB/s costs in GB
             # No CPU costs in this setting
-            costs=[host2net/1000,net2net/1000,net2host/1000,0.0]
+            costs=[host2net/1000,net2net/1000,net2host/1000,cpuCost/1000]
             session.setCosts(costs)
         outcosts= list(costs)
         for i in range(len(outcosts)):
