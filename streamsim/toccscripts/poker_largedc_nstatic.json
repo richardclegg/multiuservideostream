@@ -14,7 +14,7 @@
     },
     "network_model": {
          "type": "networkmodel.instanceCostNetwork.instanceCostNetwork",
-         "file": "../geo/VideoDistributionModel/out/ec2_price_2016.out",
+         "file": "../geo/VideoDistributionModel/out/manydc_2016.out",
         "between_cost_dollar_GB": 0.01,
         "full_stream_MBs": 0.25,
         "compressed_stream_MBs": 0.0156,

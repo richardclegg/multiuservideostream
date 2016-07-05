@@ -30,8 +30,27 @@ nohup toccscripts/poker_largedc.sh > tocc_poker_largedc.nohup &
 
 # How to plot graphs
 
+# Note that the 0.84 0.45 delay figure in costs represents
+# the average time the user stays in the system (in hours)
+# Comes from session_mean in the json file / 3600
+
+# Poker
+
 Rscript toccscripts/plot_cost_servers.R toccdata/poker_var_nrandom.out toccdata/poker_var_nstatic.out toccdata/poker_var_ndynamic.out 10000 0.84 graphs/poker_var_servers_cost.pdf
 
-Rscript toccscripts/plot_cost_servers.R toccdata/mooc_var_nrandom.out toccdata/mooc_var_nstatic.out toccdata/mooc_var_ndynamic.out 10000 1.0 graphs/mooc_var_servers_cost.pdf
+
+Rscript toccscripts/plot_qoe_servers.R toccdata/poker_var_nrandom.out toccdata/poker_var_nstatic.out toccdata/poker_var_ndynamic.out 10000 graphs/poker_var_servers_qoe.pdf
+
+# Mooc
+
+Rscript toccscripts/plot_cost_servers.R toccdata/mooc_var_nrandom.out toccdata/mooc_var_nstatic.out toccdata/mooc_var_ndynamic.out 10000 0.45 graphs/mooc_var_servers_cost.pdf
+
+Rscript toccscripts/plot_qoe_servers.R toccdata/mooc_var_nrandom.out toccdata/mooc_var_nstatic.out toccdata/mooc_var_ndynamic.out 10000 graphs/mooc_var_servers_qoe.pdf
+
+# Large DC poker
+
+Rscript toccscripts/plot_cost_servers.R toccdata/poker_largedc_nrandom.out toccdata/poker_largedc_nstatic.out toccdata/poker_largedc_ndynamic.out 10000 0.84 graphs/poker_largedc_servers_cost.pdf
+
+Rscript toccscripts/plot_qoe_servers.R toccdata/poker_largedc_nrandom.out toccdata/poker_largedc_nstatic.out toccdata/poker_largedc_ndynamic.out 10000 graphs/poker_largedc_servers_qoe.pdf
 
 

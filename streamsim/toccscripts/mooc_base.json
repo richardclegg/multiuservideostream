@@ -4,13 +4,11 @@
         "locations": "../geo/VideoDistributionModel/out/mooc.out",
         "time_demand": "../geo/VideoDistributionModel/out/mooc_time.out",
         "mean_daily_arrivals": 10000,
-        "session_mean": 3015.0,
-        "session_sigma": 0.66886
+        "session_mean": 1620.0,
+        "session_sigma": 0.8
     },
     "session_model": {
-        "type": "sessionmodel.pokerModel.pokerModel",
-        "max_room": 10,
-        "min_room": 4
+        "type": "sessionmodel.moocModel.moocModel"
     },
     "network_model": {
         "type": "networkmodel.instanceCostNetwork.instanceCostNetwork",
@@ -33,14 +31,14 @@
     "output_models": [
         {
             "type": "outputmodel.basicDaily.basicDaily",
-            "file": "pokerdaysummary.txt"
+            "file": "moocdaysummary.txt"
         },
         {
             "type": "outputmodel.basicDaily.basicDaily"
         },
         {
             "type": "outputmodel.outputCost.outputCost",
-            "file": "pokercostsummary.txt"
+            "file": "mooccostsummary.txt"
         },
         {
             "type": "outputmodel.sessionStats.sessionStats",
@@ -49,7 +47,7 @@
         },
         {
             "type": "outputmodel.qosPdf.qosPdf",
-            "file": "pokerqoesummary.txt",
+            "file": "moocqoesummary.txt",
             "style": "quintile",
             "time": "daily"
         },
