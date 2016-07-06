@@ -53,4 +53,8 @@ Rscript toccscripts/plot_cost_servers.R toccdata/poker_largedc_nrandom.out toccd
 
 Rscript toccscripts/plot_qoe_servers.R toccdata/poker_largedc_nrandom.out toccdata/poker_largedc_nstatic.out toccdata/poker_largedc_ndynamic.out 10000 graphs/poker_largedc_servers_qoe.pdf
 
+# Vary number of users
+
+Rscript toccscripts/plot_qoe_var_users.R toccdata/poker_var_user_nrandom.out toccdata/poker_var_user_nstatic.out toccdata/poker_var_user_ndynamic.out graphs/poker_var_users_qoe.pdf
+Rscript toccscripts/plot_cost_var_users.R toccdata/poker_var_user_nrandom.out toccdata/poker_var_user_nstatic.out toccdata/poker_var_user_ndynamic.out 0.84 graphs/poker_var_users_cost.pdf
 

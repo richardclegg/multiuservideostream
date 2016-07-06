@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Run from directory ABOVE toccscripts
 
-OUT_FILE="data/poker_var_potato_ndynamic.out"
+OUT_FILE="toccdata/poker_var_potato_ndynamic.out"
 IN_FILE="toccscripts/poker_var_potato_ndynamic.json"
 SCRIPT=toccscripts/meansd.py
 RND=$RANDOM
@@ -24,7 +24,7 @@ for servers in `seq 10`; do
 rm -f $TMPJSONFILE $TMPCOSTFILE $TMPDAYFILE $TMPQOSFILE    
 done
 
-OUT_FILE="data/poker_var_potato_nrandom.out"
+OUT_FILE="toccdata/poker_var_potato_nrandom.out"
 IN_FILE="toccscripts/poker_var_potato_nrandom.json"
 rm -f $OUT_FILE
 for servers in `seq 10`; do
@@ -41,7 +41,7 @@ rm -f $TMPJSONFILE $TMPCOSTFILE $TMPDAYFILE $TMPQOSFILE
 done
 
 
-OUT_FILE="data/poker_var_potato_nstatic.out"
+OUT_FILE="toccdata/poker_var_potato_nstatic.out"
 IN_FILE="toccscripts/poker_var_potato_nstatic.json"
 rm -f $OUT_FILE
 for servers in `seq 10`; do

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Run from directory ABOVE toccscripts
 
-OUT_FILE="data/mooc_var_ndynamic.out"
+OUT_FILE="toccdata/mooc_var_ndynamic.out"
 IN_FILE="toccscripts/mooc_var_ndynamic.json"
 SCRIPT=toccscripts/meansd.py
 RND=$RANDOM
@@ -24,7 +24,7 @@ for servers in `seq 10`; do
 rm -f $TMPJSONFILE $TMPCOSTFILE $TMPDAYFILE $TMPQOSFILE    
 done
 
-OUT_FILE="data/mooc_var_nstatic.out"
+OUT_FILE="toccdata/mooc_var_nstatic.out"
 IN_FILE="toccscripts/mooc_var_nstatic.json"
 rm -f $OUT_FILE
 for servers in `seq 10`; do
@@ -41,7 +41,7 @@ rm -f $TMPJSONFILE $TMPCOSTFILE $TMPDAYFILE $TMPQOSFILE
 done
 
 
-OUT_FILE="data/mooc_var_nrandom.out"
+OUT_FILE="toccdata/mooc_var_nrandom.out"
 IN_FILE="toccscripts/mooc_var_nrandom.json"
 rm -f $OUT_FILE
 for servers in `seq 10`; do
