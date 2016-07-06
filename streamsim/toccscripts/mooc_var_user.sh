@@ -2,7 +2,7 @@
 # Run from directory ABOVE scripts
 
 OUT_FILE="toccdata/mooc_var_user_ndynamic.out"
-IN_FILE="scripts/mooc_var_user_ndynamic.json"
+IN_FILE="toccscripts/mooc_var_user_ndynamic.json"
 SCRIPT=scripts/meansd.py
 RND=$RANDOM
 TMPJSONFILE="/tmp/mooc_var_$RND.json"
@@ -25,7 +25,7 @@ rm -f $TMPJSONFILE $TMPCOSTFILE $TMPDAYFILE $TMPQOSFILE
 done
 
 OUT_FILE="toccdata/mooc_var_user_nstatic.out"
-IN_FILE="scripts/mooc_var_user_nstatic.json"
+IN_FILE="toccscripts/mooc_var_user_nstatic.json"
 
 for users in "250" "500" "750" "1000"; do
     sed -e "s/XXXXXX/$users/g" $IN_FILE | sed -e "s%DAYTMPFILE%$TMPDAYFILE%g" | sed -e "s%COSTTMPFILE%$TMPCOSTFILE%g" | sed -e "s%QOSTMPFILE%$TMPQOSFILE%g" | sed -e "s%SESSTMPFILE%$TMPSESSFILE%g"> $TMPJSONFILE
@@ -41,7 +41,7 @@ rm -f $TMPJSONFILE $TMPCOSTFILE $TMPDAYFILE $TMPQOSFILE
 done
 
 OUT_FILE="toccdata/mooc_var_user_nrandom.out"
-IN_FILE="scripts/mooc_var_user_nrandom.json"
+IN_FILE="toccscripts/mooc_var_user_nrandom.json"
 
 for users in "250" "500" "750" "1000"; do
     sed -e "s/XXXXXX/$users/g" $IN_FILE | sed -e "s%DAYTMPFILE%$TMPDAYFILE%g" | sed -e "s%COSTTMPFILE%$TMPCOSTFILE%g" | sed -e "s%QOSTMPFILE%$TMPQOSFILE%g" | sed -e "s%SESSTMPFILE%$TMPSESSFILE%g"> $TMPJSONFILE
