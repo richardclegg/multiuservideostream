@@ -50,7 +50,7 @@ class simpleNetwork (networkModel.networkModel):
                 'contain compressed stream rate MB/s as float', \
                 '"compressed_stream_MBs"'
             raise ValueError
-        parseSimpleCostFile(netFName,fName)
+        self.parseSimpleCostFile(netFName,fName)
         
     def parseSimpleCostFile(self, netFName, fName):
         """ Read the network file that contains locations and prices"""
