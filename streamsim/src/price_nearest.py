@@ -63,9 +63,9 @@ for inloc in inlocs.nodes:
 			instCost= dc.instCost
 			weight= 1.0
 			break
-		inCost+= dc.inCost*d
-		outCost+= dc.outCost*d
-		instCost+= dc.instCost*d
-		weight+= d
+		inCost+= dc.inCost/d
+		outCost+= dc.outCost/d
+		instCost+= dc.instCost/d
+		weight+= 1.0/d
 		#print d,dc.getLat(),dc.getLong()
 	print dc.getLat(),",", dc.getLong(),",", inCost/weight,",", outCost/weight,",", instCost/weight
