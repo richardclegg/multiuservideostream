@@ -28,7 +28,7 @@
     },
     "server_model": {
         "type": "servermodel.nStatic.nStatic",
-        "file": "toccscripts/poker_static.out",
+        "file": "toccscripts/poker_equal.out",
         "number": XXXXXX
     },
     "output_models": [
