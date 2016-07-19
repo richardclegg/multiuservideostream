@@ -1,5 +1,6 @@
 {
 	"demand_model": {
+        "type": "demandmodel.poisLogDemand.poisLogDemand",
         "locations": "../geo/VideoDistributionModel/out/mooc.out",
         "time_demand": "../geo/VideoDistributionModel/out/mooc_time.out",
         "mean_daily_arrivals": 1000,
