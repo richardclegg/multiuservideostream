@@ -1,9 +1,0 @@
-Readme to get results for Trans of Cloud Computing
-
-All scripts from this directory
-
-python version 2.7.11
-
-# Get output for static
-src/createNStatic.py toccscripts/poker_base.json 10 1000 > toccscripts/poker_static.out
-src/createNStatic.py toccscripts/mooc_base.json 10 1000 > toccscripts/mooc_static.out

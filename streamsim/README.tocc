@@ -1,4 +1,9 @@
-Scripts to generate Trans on Cloud Computing paper
+#Readme to get results for Trans of Cloud Computing
+
+#All scripts from this directory
+
+# python version 2.7.11
+
 
 scripts/plot_clusters.R creates graphs/cluster_plot.pdf 
 
@@ -11,7 +16,7 @@ src/price_nearest.py ../geo/VideoDistributionModel/out/ec2_price_2016.out  ../ge
 src/createNStatic.py toccscripts/poker_base.json 10 1000 > toccscripts/poker_static.out
 src/createNStatic.py toccscripts/mooc_base.json 10 1000 > toccscripts/mooc_static.out
 src/createNStatic.py toccscripts/poker_largedc.json 10 1000 > toccscripts/poker_largedc_static.out
-
+src/createNStatic.py toccscripts/mooc_largedc.json 10 1000 > toccscripts/mooc_largedc_static.out
 
 # Poker vary number of servers results
 nohup toccscripts/poker_var_servers.sh > tocc_poker_var_servers.nohup &
