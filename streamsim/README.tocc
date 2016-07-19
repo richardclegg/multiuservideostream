@@ -18,6 +18,7 @@ src/createNStatic.py toccscripts/mooc_base.json 10 1000 > toccscripts/mooc_stati
 src/createNStatic.py toccscripts/poker_largedc.json 10 1000 > toccscripts/poker_largedc_static.out
 src/createNStatic.py toccscripts/mooc_largedc.json 10 1000 > toccscripts/mooc_largedc_static.out
 src/createNStatic.py toccscripts/poker_equal.json 10 1000 > toccscripts/poker_equal.out
+src/createNStatic.py toccscripts/poker_half.json 10 1000 > toccscripts/poker_half.out
 
 # Poker vary number of servers results
 nohup toccscripts/poker_var_servers.sh > tocc_poker_var_servers.nohup &
@@ -30,8 +31,12 @@ nohup toccscripts/poker_var_user.sh > tocc_poker_var_users.nohup &
 nohup toccscripts/poker_var_stay.sh > tocc_poker_var_stay.nohup &
 # Base case with potato strategy
 nohup toccscripts/poker_var_potato.sh > tocc_poker_var_potato.nohup &
-# Poker large data center
+# large data center
 nohup toccscripts/poker_largedc.sh > tocc_poker_largedc.nohup &
+nohup toccscripts/mooc_largedc.sh > tocc_mooc_largedc.nohup &
+# Poker with users from all round globe and "half/half" scenario
+nohup toccscripts/poker_half_var_servers.sh > poker_half_var_servers.nohup &
+nohup toccscripts/poker_equal_var_servers.sh > poker_equal_var_servers.nohup &
 
 
 # How to plot graphs
