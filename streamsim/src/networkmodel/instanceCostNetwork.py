@@ -77,7 +77,7 @@ class instanceCostNetwork (networkModel.networkModel):
                 continue
             l=origline.split('%')[0].split('#')[0] # strip comments
             parts= l.split(",")
-            if len(parts) != 4 and len(parts) != 5:
+            if len(parts) != 5 and len(parts) != 6:
                 print >> sys.stderr,"Lines in instanceCostNetwork file", \
                     netFName,' are expected to be 5 tuple floats or ', \
                     ' 6 tuple with zone string as third arg', \
