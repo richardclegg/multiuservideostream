@@ -45,6 +45,7 @@ inprices.parseInstCostFile(input_price,"")
 inlocs= simpleNetwork.simpleNetwork()
 inlocs.parseSimpleCostFile(input_locations,"")
 hav=haversine.haversine()
+print "%Lat Lon Zone InCost OutCost % Placename"
 for inloc in inlocs.nodes:
 	combos=[]
 	for inprice in inprices.nodes:
@@ -68,4 +69,4 @@ for inloc in inlocs.nodes:
 		instCost+= dc.instCost/d
 		weight+= 1.0/d
 		#print d,dc.getLat(),dc.getLong()
-	print dc.getLat(),",", dc.getLong(),",", inCost/weight,",", outCost/weight,",", instCost/weight
+	print inloc.getLat(),",", inloc.getLong(),",",inloc.getContinent(),",", inCost/weight,",", outCost/weight,",", instCost/weight, "%" 
