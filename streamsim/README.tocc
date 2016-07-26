@@ -20,6 +20,10 @@ src/createNStatic.py toccscripts/mooc_largedc.json 10 1000 > toccscripts/mooc_la
 src/createNStatic.py toccscripts/poker_equal.json 10 1000 > toccscripts/poker_equal.out
 src/createNStatic.py toccscripts/poker_half.json 10 1000 > toccscripts/poker_half.out
 
+#poker variable demand
+
+nohup toccscritps/poker_var_demand.sh > tocc_poker_var_demand.nohup &
+
 # Poker vary number of servers results
 nohup toccscripts/poker_var_servers.sh > tocc_poker_var_servers.nohup &
 # Mooc vary number of servers results
@@ -37,6 +41,7 @@ nohup toccscripts/mooc_largedc.sh > tocc_mooc_largedc.nohup &
 # Poker with users from all round globe and "half/half" scenario
 nohup toccscripts/poker_half_var_servers.sh > poker_half_var_servers.nohup &
 nohup toccscripts/poker_equal_var_servers.sh > poker_equal_var_servers.nohup &
+
 
 
 # How to plot graphs
@@ -58,13 +63,13 @@ Rscript toccscripts/plot_cost_servers.R toccdata/mooc_var_nrandom.out toccdata/m
 
 Rscript toccscripts/plot_qoe_servers.R toccdata/mooc_var_nrandom.out toccdata/mooc_var_nstatic.out toccdata/mooc_var_ndynamic.out 10000 graphs/mooc_var_servers_qoe.pdf
 
-# Large DC poker
+# Large DC poker and mooc
 
 Rscript toccscripts/plot_cost_servers.R toccdata/poker_largedc_nrandom.out toccdata/poker_largedc_nstatic.out toccdata/poker_largedc_ndynamic.out 10000 0.84 graphs/poker_largedc_servers_cost.pdf
 
 Rscript toccscripts/plot_qoe_servers.R toccdata/poker_largedc_nrandom.out toccdata/poker_largedc_nstatic.out toccdata/poker_largedc_ndynamic.out 10000 graphs/poker_largedc_servers_qoe.pdf
 
-Rscript toccscripts/plot_cost_servers.R toccdata/mooc_largedc_nrandom.out toccdata/mooc_largedc_nstatic.out toccdata/mooc_largedc_ndynamic.out 10000 0.84 graphs/mooc_largedc_servers_cost.pdf
+Rscript toccscripts/plot_cost_servers.R toccdata/mooc_largedc_nrandom.out toccdata/mooc_largedc_nstatic.out toccdata/mooc_largedc_ndynamic.out 10000 0.45 graphs/mooc_largedc_servers_cost.pdf
 
 Rscript toccscripts/plot_qoe_servers.R toccdata/mooc_largedc_nrandom.out toccdata/mooc_largedc_nstatic.out toccdata/mooc_largedc_ndynamic.out 10000 graphs/mooc_largedc_servers_qoe.pdf
 
@@ -77,3 +82,29 @@ Rscript toccscripts/plot_cost_var_users.R toccdata/poker_var_user_nrandom.out to
 
 Rscript toccscripts/plot_qoe_var_users.R toccdata/mooc_var_user_nrandom.out toccdata/mooc_var_user_nstatic.out toccdata/mooc_var_user_ndynamic.out graphs/mooc_var_users_qoe.pdf
 Rscript toccscripts/plot_cost_var_users.R toccdata/mooc_var_user_nrandom.out toccdata/mooc_var_user_nstatic.out toccdata/mooc_var_user_ndynamic.out 0.45 graphs/mooc_var_users_cost.pdf
+# Routing policies
+
+
+Rscript toccscripts/plot_qoe_servers_routes.R toccdata/poker_var_ndynamic.out toccdata/poker_var_stay_ndynamic.out toccdata/poker_var_potato_ndynamic.out 10000 graphs/poker_qoe_servers_routes.pdf
+Rscript toccscripts/plot_cost_servers_routes.R toccdata/poker_var_ndynamic.out toccdata/poker_var_stay_ndynamic.out toccdata/poker_var_potato_ndynamic.out 10000 0.84 graphs/poker_cost_servers_routes.pdf
+
+# Poker variants
+
+Rscript toccscripts/plot_cost_servers.R toccdata/poker_equal_nrandom.out toccdata/poker_equal_nstatic.out toccdata/poker_equal_ndynamic.out 10000 0.84 graphs/poker_equal_servers_cost.pdf
+
+
+Rscript toccscripts/plot_qoe_servers.R toccdata/poker_equal_nrandom.out toccdata/poker_equal_nstatic.out toccdata/poker_equal_ndynamic.out 10000 graphs/poker_equal_servers_qoe.pdf
+
+Rscript toccscripts/plot_cost_servers.R toccdata/poker_half_nrandom.out toccdata/poker_half_nstatic.out toccdata/poker_half_ndynamic.out 10000 0.84 graphs/poker_half_servers_cost.pdf
+
+
+Rscript toccscripts/plot_qoe_servers.R toccdata/poker_half_nrandom.out toccdata/poker_half_nstatic.out toccdata/poker_half_ndynamic.out 10000 graphs/poker_half_servers_qoe.pdf
+
+
+#Make png from pdf for inclusion in word docs:
+for a in graphs/*.pdf; do png=graphs/`basename $a .pdf`.png; convert -density 200x200 -resize 100% $a $png ; done
+
+#convert any of them from pdf to png
+
+scripts/conv_pdf.sh graphs/graph.pdf 
+#outputs graph/graph.png

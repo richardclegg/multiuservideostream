@@ -63,4 +63,4 @@ g<-ggplot(combined,aes(x=noservers)) + theme_opts +
         guide_legend(title=element_blank())) +
     xlab("Number of cloud hosts/session") +
     ylab("Mean delay (secs)")
-ggsave(outfilename,width=6.0,height=4.0)
+ggsave(outfilename,width=6.0,height=2.5)

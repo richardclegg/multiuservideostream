@@ -70,4 +70,4 @@ g<-ggplot(combined,aes(x=duration)) + theme_opts +
         guide_legend(title=element_blank())) +        
     xlab("Mean user stay time (seconds)") +
     ylab("Mean delay (secs)")
-ggsave(outfilename,width=6.0,height=4.0)
+ggsave(outfilename,width=6.0,height=2.5)

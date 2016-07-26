@@ -70,4 +70,4 @@ g<-ggplot(combined,aes(x=nousers)) + theme_opts +
         guide_legend(title=element_blank())) +
     xlab("Number of users") +
     ylab("Mean cost per user hour ($)")
-ggsave(outfilename,width=6.0,height=4.0)
+ggsave(outfilename,width=6.0,height=2.5)
